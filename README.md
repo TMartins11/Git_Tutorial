@@ -1,2 +1,2 @@
 # Git_Tutorial
-Projeto de um site que visa ensinar ao usuário como funciona o sistema de controle de versões Git.
+Projeto de um site que visa ensinar ao usuário como funciona o sistema de controle de versões Git, assim como sua história e principais comandos.
