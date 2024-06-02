@@ -37,3 +37,23 @@ caption {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.captions {
+  display: flex;
+  padding-left: 9px;
+  margin-left: 9px;
+}
+
+.c2 {
+  padding-left: 50px;
+  margin-left: 50px;
+}
+
+.container {
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+mark {
+  background-color: red;
+}
