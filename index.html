@@ -61,19 +61,54 @@
                     <img src="img/git.png" alt="Logo do Git" title="Logo do Git" width="300" height="300"
                         loading="eager">
                 </div>
+            </figure>
 
-                <div class="captions">
-                    <p>Linus Torvalds - O Pai do Git</p>
-                    <div class="c2">
-                        <p>Logo do sistema de controle de versões Git</p>
-                    </div>
+            <div class="captions">
+                <p>Linus Torvalds - O Pai do Git</p>
+                <div class="c2">
+                    <p>Logo do sistema de controle de versões Git</p>
                 </div>
+            </div>
         </article>
 
         <hr>
 
         <article id="principaiscomandos">
             <h2>Principais Comandos</h2>
+            <section id="comandosconfig">
+                <ul>
+                    <li>
+                        <h3>Configurações iniciais</h3>
+                    </li>
+                </ul>
+
+                <div class="container">
+                    <p>Antes de começarmos a utilizar o sistema de controle de versões Git, é essencial fazer algumas
+                        Configurações iniciais.</p>
+                </div>
+
+                <dl>
+                    <div class="container">
+                        <dt>1- <b>git config</b></dt>
+
+                        <dd>
+
+                        </dd>
+                    </div>
+                </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
             <section id="comandosinicializar">
                 <ul>
                     <li>
@@ -86,55 +121,98 @@
                         <dt>1- <b>git init</b></dt>
 
                         <dd>
-                            Este comando <b>cria um repositório vazio na pasta em que foi executado</b>, onde <em>o Git
-                                começa a acompanhar todas as mudanças que você faz nos arquivos dentro dessa pasta</em>,
+                            Este comando <b>cria um repositório vazio na pasta em que foi executado</b>, onde <i>o Git
+                                começa a acompanhar todas as mudanças que você faz nos arquivos dentro dessa pasta</i>,
                             permitindo que você controle o histórico das alterações,volte para versões anteriores e
                             trabalhe de forma colaborativa com outras pessoas.
                         </dd>
+                    </div>
+                </dl>
 
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitinit.png" alt="Exemplo do comando git init" title="Exemplo do comando git init"
+                        width="620" height="244" loading="lazy">
+                </figure>
 
-                        <figure>
-                            <figcaption>Exemplo:</figcaption>
-                            <img src="img/ex_gitinit.png" alt="Exemplo do comando git init"
-                                title="Exemplo do comando git init" width="620" height="244" loading="lazy">
-                        </figure>
-
-
-
+                <dl>
+                    <div class="container">
                         <dt>2- <b>git status</b></dt>
                         <dd>
                             Este comando tem a função de <b>mostrar o estado atual do repositório Git</b>, exibindo
                             informações sobre arquivos modificados, novos arquivos, arquivos prontos para serem
                             adicionados ao próximo commit e outras informações relevantes para o controle de versão.
                         </dd>
+                    </div>
+                </dl>
 
-                        <figure>
-                            <figcaption>Exemplo:</figcaption>
-                            <img src="img/exgitstatus.png" alt="Exemplo do comando git status"
-                                title="Exemplo do comando git status" width="891" height="201" loading="lazy">
-                        </figure>
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitstatus.png" alt="Exemplo do comando git status"
+                        title="Exemplo do comando git status" width="891" height="201" loading="lazy">
+                </figure>
 
-                        <aside>
-                            <details>
-                                <summary>Observação:</summary>
-                                <p>
-                                    Note que, mesmo após a inicialização do repositório Git, o arquivo que criamos
-                                    <mark>ainda não está sendo monitorado</mark> pelo sistema de controle de versões.
-                                </p>
-                            </details>
-                        </aside>
+                <details>
+                    <summary>Observação:</summary>
+                    <p>
+                        Note que, mesmo após a inicialização do repositório Git, o arquivo que criamos
+                        <mark>ainda não está sendo monitorado</mark> pelo sistema de controle de versões.
+                    </p>
+                </details>
 
-                        <br>
-
+                <dl>
+                    <div class="container">
                         <dt>3- <b>git add</b></dt>
                         <dd>
                             Este comando tem a função de <b>adicionar arquivos ao sistema de controle de versões</b>,
-                            após adicionados, <em>o Git irá monitorar todas as mudanças ocorridas</em> desde o último
-                            commit realizado,<em>também é utilizado para "programar" mudanças nos arquivos antes de
-                                adicioná-los ao repositório remoto com mais um commit.
+                            após adicionados, <i>o Git irá monitorar todas as mudanças ocorridas</i> desde o último
+                            commit realizado, também é utilizado para "programar" mudanças nos arquivos antes de
+                            adicioná-los ao repositório remoto com mais um commit.
                         </dd>
                     </div>
                 </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitadd.png" alt="Exemplo do comando git add" title="Exemplo do comando git status"
+                        width="564" height="210" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>É importante ressaltar que esse comando pode ser aplicado de diferentes formas, como:</dt>
+
+                        <dd>1- git add arq1.txt arq2.txt &nbsp;- Adicionando somente os arquivos desejados ao sistema de
+                            controle de versões.</dd>
+
+                        <dd>2- git add *.txt &nbsp;- Que adiciona todos os arquivos do tipo selecionado.</dd>
+
+                        <dd>3- git add . &nbsp;- Esse comando adiciona todos os arquivos existentes na pasta ao sistema
+                            de controle de versões.
+                        </dd>
+                    </div>
+                </dl>
+
+                <dl>
+                    <div class="container">
+                        <dt>4- <b>git commit</b></dt>
+                        <dd>Este comando tem a função de <b>salvar o estado atual dos seus arquivos no repositório
+                                git</b>. É comum e boa prática executar o comando git commit -m "mensagem" a fim de
+                            explicar paraos outros desenvolvedores de seu projeto a mudança que foi feita no arquivo.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitcommit.png" alt="Exemplo do comando git commit"
+                        title="Exemplo do comando git commit" width="465" height="220" loading="lazy">
+                </figure>
+
+                <div class="container">
+                    <p>Note que agora o estado atual do repositório Git foi salvo, podendo ser restaurado a qualquer
+                        momento.</p>
+                </div>
             </section>
         </article>
     </main>
