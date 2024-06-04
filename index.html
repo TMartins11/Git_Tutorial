@@ -315,6 +315,67 @@
                         title="Exemplos Git Remote e Git Push" width="612" height="265" loading="lazy">
                 </figure>
 
+                <dl>
+                    <div class="container">
+                        <dt>3- <b>git fetch</b></dt>
+                        <dd>O comando git fetch é usado para <b>buscar as últimas alterações do repositório remoto para
+                                o seu repositório local</b>. Quando você executa git fetch, o Git busca todas as
+                            alterações feitas no repositório remoto desde a última vez que você sincronizou. No entanto,
+                            <i>ele não mescla essas alterações com o seu trabalho atual, apenas atualiza as referências
+                                locais</i> para refletir o estado atual do repositório remoto. <b>Isso permite que você
+                                veja o que mudou no repositório remoto sem mesclar imediatamente as alterações com o seu
+                                trabalho local</b>.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitfetch.png" alt="Exemplo Git Fetch" title="Exemplo Git Fetch" width="447"
+                        height="185" loading="lazy">
+                </figure>
+
+                <div class="container">
+                    <p>* Utilizamos o comando "git diff", já demonstrado anteriormente, para conferir as mudanças no
+                        repositório remoto:</p>
+                </div>
+
+                <figure>
+                    <img src="img/gitdiff_fetch.png" alt="Git diff"
+                        title="Visualizar as alterações no repositório remoto." width="384" height="154" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>4- <b>git merge</b></dt>
+                        <dd>O comando git merge é usado para <b>integrar as alterações de uma branch para outra no
+                                Git</b>. Quando você executa git merge, <b>o Git combina as alterações das duas
+                                branches, aplicando as alterações da branch de origem na branch de destino</b>. Com
+                            as
+                            alterações mescladas e consolidadas na branch de destino, é possível trabalhar em
+                            equipe,
+                            combinando o trabalho feito em diferentes linhas de desenvolvimento dentro do
+                            mesmo projeto.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitmerge.png" alt="Exemplo Git Merge" title="Exemplo Git Merge" width="445"
+                        height="220" loading="lazy">
+                </figure>
+
+                <div class="container">
+                    <p>* Observe que agora não existem diferenças entre o repositório local e o repositório remoto:</p>
+                </div>
+
+                <figure>
+                    <img src="img/gitmergediff.png" alt="Git diff"
+                        title="Visualizar a igualdade entre repositórios local e remoto." width="256" height="130"
+                        loading="lazy">
+                </figure>
+
             </section>
         </article>
     </main>
