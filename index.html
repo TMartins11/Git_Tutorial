@@ -78,7 +78,7 @@
             <section id="comandosconfig">
                 <ul>
                     <li>
-                        <h3>Configurações iniciais</h3>
+                        <h3>Configurações iniciais / Utilitários</h3>
                     </li>
                 </ul>
 
@@ -92,23 +92,61 @@
                         <dt>1- <b>git config</b></dt>
 
                         <dd>
-
+                            O comando git config é utilizado no sistema de controle de versões para <b>configurar opções
+                                específicas do usuário, repositório ou sistema</b>. É importante que o seu nome de
+                            usuário e e-mail estejam configurados de forma correta a fim de facilitar a comunicação
+                            durante a realização de um projeto no Git.
                         </dd>
                     </div>
                 </dl>
 
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitconfig.png" alt="Exemplo Git Config" title="Exemplo Git Config" width="549"
+                        height="171" loading="lazy">
+                </figure>
 
 
+                <div class="container">
+                    <small>*Além da configuração padrão do username e e-mail, é boa prática trocar o nome da branch
+                        padrão de master para main, visto que é a norma utilizada atualmente.</small>
+
+                    <p>
+                        É importante ressaltar que o comando <b>git config pode ser usado para fazer configurações
+                            específicas a um repositório, ou para o âmbito global da sua máquina</b>. A opção --global é
+                        o que faz a configuração escolhida atuar para todos os repositórios, sem ele, as mudanças são
+                        locais.Também vale lembrar as diversas funcionalidade do comando, podendo ser usado para listar
+                        as configurações atuais com --list, pode ser usado também com --get, afim de emitir algum desses
+                        tópicos individualmente, dentre outras funções que você pode conferir com a execução do próximo
+                        comando da nossa lista.
+                    </p>
 
 
+                </div>
 
+                <dl>
+                    <div class="container">
+                        <dt>2- <b>git help</b></dt>
 
+                        <dd>
+                            O comando git help <b>é usado para obter ajuda sobre os comandos do Git</b>. Quando você
+                            executa git help, ele exibe informações sobre como usar o Git, incluindo uma lista de
+                            comandos e opções disponíveis, além de fornecer uma descrição detalhada de cada comando. Se
+                            você deseja conferir os usos de um comando específico, basta digitar "git help
+                            nomedocomando" e o Git irá abrir um manual com a descrição e todos os usos do comando
+                            desejado.
+                        </dd>
+                    </div>
+                </dl>
 
-
-
-
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_githelp.png" alt="Exemplo Git Help" title="Exemplo Git Help" width="716"
+                        height="828" loading="lazy">
+                </figure>
 
             </section>
+
             <section id="comandosinicializar">
                 <ul>
                     <li>
@@ -206,13 +244,77 @@
                 <figure>
                     <figcaption>Exemplo:</figcaption>
                     <img src="img/ex_gitcommit.png" alt="Exemplo do comando git commit"
-                        title="Exemplo do comando git commit" width="465" height="220" loading="lazy">
+                        title="Exemplo do comando git commit" width="550" height="260" loading="lazy">
                 </figure>
 
                 <div class="container">
                     <p>Note que agora o estado atual do repositório Git foi salvo, podendo ser restaurado a qualquer
                         momento.</p>
                 </div>
+            </section>
+
+            <section id="comandoscontrole">
+                <ul>
+                    <li>
+                        <h3>Controle de Repositório / Repositório Remoto</h3>
+                    </li>
+                </ul>
+                <dl>
+                    <div class="container">
+                        <dt>1- <b>git remote</b></dt>
+
+                        <dd>
+                            Com esse comando, você pode <b>associar seu repositório local Git a um repositório na nuvem
+                                do Github</b>. É importante destacar que "git remote" tem inúmeras funções e usos no
+                            cotidiano de um programador, podendo ser usado como:
+                            <ul>
+
+                                <li>git remote -v: Exibe os nomes e URLs de todos os repositórios remotos configurados.
+                                </li>
+
+                                <li>git remote add origin &lt;url&gt; Adiciona um novo repositório remoto chamado
+                                    'origin' com o URL especificado.</li>
+
+                                <li>git remote rename origin upstream: Renomeia o repositório remoto 'origin' para
+                                    'upstream'.</li>
+                                <li>git remote remove origin: Remove o repositório remoto chamado 'origin' do seu
+                                    projeto Git.
+                                </li>
+                            </ul>
+
+                            <small>* Antes de demonstrar um exemplo prático, vamos ao comando git push, o "maior aliado"
+                                do git remote. </small>
+                        </dd>
+                    </div>
+                </dl>
+
+                <dl>
+                    <div class="container">
+                        <dt>2- <b>git push</b></dt>
+                        <dd>O comando git push é <b>usado para enviar commits locais para um repositório remoto</b>.
+                            <i>Ele atualiza o repositório remoto</i> com as alterações que você fez no seu repositório
+                            local.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitremote_gitpush.png" alt="Exemplos Git Remote e Git Push"
+                        title="Exemplos Git Remote e Git Push" width="556" height="198" loading="lazy">
+                </figure>
+
+                <div class="container">
+                    <p>Note que <i>antes de enviar o repositório local a um ambiente remoto</i> <b>é necessário o uso do
+                            comando git remote</b>. Após seguir estas instruções, você já poderá observar seu
+                        repositório no github. </p>
+                </div>
+
+                <figure>
+                    <img src="img/ex_repremoto.png" alt="Exemplos Git Remote e Git Push"
+                        title="Exemplos Git Remote e Git Push" width="612" height="265" loading="lazy">
+                </figure>
+
             </section>
         </article>
     </main>
