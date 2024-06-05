@@ -147,13 +147,31 @@
 
                 <dl>
                     <div class="container">
-                        <dt>3- <b>git diff</b></dt>
+                        <dt>3- <b>git show</b></dt>
+                        <dd>
+                            O comando git show <b>exibe informações sobre um commit específico, incluindo as mudanças
+                                introduzidas, as mensagens de commit e os metadados associados</b>. Observe que ele foca
+                            em mostrar informações detalhadas sobre um <i>único</i> commit especificado.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitshow.png" alt="Exemplo Git Show" title="Exemplo Git Show" width="660"
+                        height="174" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>4- <b>git diff</b></dt>
 
                         <dd>
                             O comando git diff <b>compara as diferenças entre o estado atual do seu repositório Git e o
                                 último commit, mostrando as mudanças entre eles</b>. <i>Também pode ser usado para
                                 checar as mudanças entre diferentes branchs e de commits passados para commits
-                                recentes</i>.
+                                recentes</i>. Note que ele se difere ligeiramente do comando git show, visto que foca na
+                            diferença entre commits, e não em detalhar um especificamente.
                         </dd>
                     </div>
                 </dl>
@@ -169,7 +187,7 @@
                 </figure>
                 <dl>
                     <div class="container">
-                        <dt>4- <b>git revert</b></dt>
+                        <dt>5- <b>git revert</b></dt>
 
                         <dd>
                             O comando "git revert" é <b>usado para desfazer alterações introduzidas por commits
