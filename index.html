@@ -6,21 +6,21 @@
     <meta name="Autores" content="Thiago Martins e Pedro Finochio">
     <meta name="Descrição"
         content="Este site visa ensinar ao usuário como utilizar o sistema de controle de versões git e seus principais comandos.">
-    <title>Como usar Git</title>
+    <title>Git Tutorial</title>
     <link rel="icon" href="giticon.ico" type="image/x-icon">
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 
 <body>
     <header>
-        <h1>Como usar Git</h1>
+        <h1>Git Tutorial</h1>
 
         <hr>
 
         <nav aria-label="Menu primário de Navegação">
             <h2>Tópicos:</h2>
             <ul>
-                <li><a href="#historiagit">O que é Git</a>.</li>
+                <li><a href="#historiagit">O que é Git</a></li>
                 <li><a href="#principaiscomandos">Principais Comandos</a></li>
             </ul>
         </nav>
@@ -75,10 +75,21 @@
 
         <article id="principaiscomandos">
             <h2>Principais Comandos</h2>
-            <section id="comandosconfig">
+            <nav aria-label="Menu Secundário de Navegação">
+                <ul>
+                    <li><a href="#config_iniciais">Configurações Iniciais</a></li>
+                    <li><a href="#seuprimeirorepositorio">Criando seu Primeiro Repositório</a></li>
+                    <li><a href="#controlederep">Controle de Repositório/ Repositório Remoto</a></li>
+                    <li><a href="#utilitarios">Utilitários</a></li>
+                </ul>
+            </nav>
+
+            <hr>
+
+            <section id="config_iniciais">
                 <ul>
                     <li>
-                        <h3>Configurações iniciais / Utilitários</h3>
+                        <h3>Configurações iniciais</h3>
                     </li>
                 </ul>
 
@@ -123,87 +134,14 @@
 
 
                 </div>
-
-                <dl>
-                    <div class="container">
-                        <dt>2- <b>git help</b></dt>
-
-                        <dd>
-                            O comando git help <b>é usado para obter ajuda sobre os comandos do Git</b>. Quando você
-                            executa git help, ele exibe informações sobre como usar o Git, incluindo uma lista de
-                            comandos e opções disponíveis, além de fornecer uma descrição detalhada de cada comando. Se
-                            você deseja conferir os usos de um comando específico, basta digitar "git help
-                            nomedocomando" e o Git irá abrir um manual com a descrição e todos os usos do comando
-                            desejado.
-                        </dd>
-                    </div>
-                </dl>
-
-                <figure>
-                    <figcaption>Exemplo:</figcaption>
-                    <img src="img/ex_githelp.png" alt="Exemplo Git Help" title="Exemplo Git Help" width="716"
-                        height="828" loading="lazy">
-                </figure>
-
-                <dl>
-                    <div class="container">
-                        <dt>3- <b>git show</b></dt>
-                        <dd>
-                            O comando git show <b>exibe informações sobre um commit específico, incluindo as mudanças
-                                introduzidas, as mensagens de commit e os metadados associados</b>. Observe que ele foca
-                            em mostrar informações detalhadas sobre um <i>único</i> commit especificado.
-                        </dd>
-                    </div>
-                </dl>
-
-                <figure>
-                    <figcaption>Exemplo:</figcaption>
-                    <img src="img/ex_gitshow.png" alt="Exemplo Git Show" title="Exemplo Git Show" width="660"
-                        height="174" loading="lazy">
-                </figure>
-
-                <dl>
-                    <div class="container">
-                        <dt>4- <b>git diff</b></dt>
-
-                        <dd>
-                            O comando git diff <b>compara as diferenças entre o estado atual do seu repositório Git e o
-                                último commit, mostrando as mudanças entre eles</b>. <i>Também pode ser usado para
-                                checar as mudanças entre diferentes branchs e de commits passados para commits
-                                recentes</i>. Note que ele se difere ligeiramente do comando git show, visto que foca na
-                            diferença entre commits, e não em detalhar um especificamente.
-                        </dd>
-                    </div>
-                </dl>
-                <figure>
-                    <figcaption>Exemplo:</figcaption>
-                    <div class="alinhar">
-                        <img src="img/ex2_gitdiff.png" alt="Exemplo Git Diff" title="Exemplo Git Diff" width="462"
-                            height="69" loading="lazy">
-
-                        <img src="img/ex_gitdiff.png" alt="Diferenças main atual e penúltimo commit"
-                            title="Diferenças main atual e penúltimo commit" width="371" height="166" loading="lazy">
-                    </div>
-                </figure>
-                <dl>
-                    <div class="container">
-                        <dt>5- <b>git revert</b></dt>
-
-                        <dd>
-                            O comando "git revert" é <b>usado para desfazer alterações introduzidas por commits
-                                específicos, criando novos commits que invertem as mudanças desses commits
-                                anteriores</b>. Note que <i>é necessário especificar o commit que você deseja
-                                desfazer</i>, após isso, basta executar o comando e todas as alterações feitas nesse
-                            commit serão revertidas.
-                        </dd>
-                    </div>
-                </dl>
             </section>
 
-            <section id="comandosinicializar">
+            <hr>
+
+            <section id="seuprimeirorepositorio">
                 <ul>
                     <li>
-                        <h3>Comandos de Inicialização</h3>
+                        <h3>Criando seu Primeiro Repositório Git</h3>
                     </li>
                 </ul>
 
@@ -286,7 +224,30 @@
 
                 <dl>
                     <div class="container">
-                        <dt>4- <b>git commit</b></dt>
+                        <dt>4- <b>git rm</b></dt>
+                        <dd>
+                            O comando git rm <b>remove os arquivos selecionados, parando o rastreamento pelo Git e
+                                excluindo-os da
+                                pasta local</b>. <i>Ao contrário do git add, que adiciona arquivos ao repositório, o git
+                                rm
+                                os marca para remoção no próximo commit</i>. É importante lembrar que o git rm não
+                            remove
+                            arquivos do histórico de commits. Se deseja remover um arquivo completamente do histórico,
+                            utilize o comando git reset.
+
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_grm.png" alt="Exemplo Git rm" title="Exemplo Git rm" width="444" height="270"
+                        loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>5- <b>git commit</b></dt>
                         <dd>Este comando tem a função de <b>salvar o estado atual dos seus arquivos no repositório
                                 git</b>. É comum e boa prática executar o comando git commit -m "mensagem" a fim de
                             explicar paraos outros desenvolvedores de seu projeto a mudança que foi feita no arquivo.
@@ -306,7 +267,9 @@
                 </div>
             </section>
 
-            <section id="comandoscontrole">
+            <hr>
+
+            <section id="controlederep">
                 <ul>
                     <li>
                         <h3>Controle de Repositório / Repositório Remoto</h3>
@@ -532,9 +495,121 @@
                     <img src="img/ex_gitckout.png" alt="Exemplo Git Checkout" title="Exemplo Git Checkout" width="600"
                         height="166" loading="lazy">
                 </figure>
+            </section>
 
+            <hr>
 
+            <section id="utilitarios">
+                <ul>
+                    <li>
+                        <h3>Utilitários</h3>
+                    </li>
+                </ul>
+                <dl>
+                    <div class="container">
+                        <dt>1- <b>git help</b></dt>
 
+                        <dd>
+                            O comando git help <b>é usado para obter ajuda sobre os comandos do Git</b>. Quando você
+                            executa git help, ele exibe informações sobre como usar o Git, incluindo uma lista de
+                            comandos e opções disponíveis, além de fornecer uma descrição detalhada de cada comando. Se
+                            você deseja conferir os usos de um comando específico, basta digitar "git help
+                            nomedocomando" e o Git irá abrir um manual com a descrição e todos os usos do comando
+                            desejado.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_githelp.png" alt="Exemplo Git Help" title="Exemplo Git Help" width="716"
+                        height="828" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>2- <b>git show</b></dt>
+                        <dd>
+                            O comando git show <b>exibe informações sobre um commit específico, incluindo as mudanças
+                                introduzidas, as mensagens de commit e os metadados associados</b>. Observe que ele foca
+                            em mostrar informações detalhadas sobre um <i>único</i> commit especificado.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitshow.png" alt="Exemplo Git Show" title="Exemplo Git Show" width="660"
+                        height="174" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>3- <b>git diff</b></dt>
+
+                        <dd>
+                            O comando git diff <b>compara as diferenças entre o estado atual do seu repositório Git e o
+                                último commit, mostrando as mudanças entre eles</b>. <i>Também pode ser usado para
+                                checar as mudanças entre diferentes branchs e de commits passados para commits
+                                recentes</i>. Note que ele se difere ligeiramente do comando git show, visto que foca na
+                            diferença entre commits, e não em detalhar um especificamente.
+                        </dd>
+                    </div>
+                </dl>
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <div class="alinhar">
+                        <img src="img/ex2_gitdiff.png" alt="Exemplo Git Diff" title="Exemplo Git Diff" width="462"
+                            height="69" loading="lazy">
+
+                        <img src="img/ex_gitdiff.png" alt="Diferenças main atual e penúltimo commit"
+                            title="Diferenças main atual e penúltimo commit" width="371" height="166" loading="lazy">
+                    </div>
+                </figure>
+                <dl>
+                    <div class="container">
+                        <dt>4- <b>git revert</b></dt>
+
+                        <dd>
+                            O comando "git revert" é <b>usado para desfazer alterações introduzidas por commits
+                                específicos, criando novos commits que invertem as mudanças desses commits
+                                anteriores</b>. Note que <i>é necessário especificar o commit que você deseja
+                                desfazer</i>, após isso, basta executar o comando e todas as alterações feitas nesse
+                            commit serão revertidas.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+                    <img src="img/ex_gitrvrt.png" alt="Exemplo Git Revert" title="Exemplo Git Revert" width="482"
+                        height="279" loading="lazy">
+                </figure>
+
+                <dl>
+                    <div class="container">
+                        <dt>5- <b>git blame</b></dt>
+
+                        <dd>
+                            O comando "git blame" é <b>usado para visualizar a autoria de cada linha em um arquivo,
+                                mostrando quem modificou o arquivo pela última vez e em qual commit essa modificação foi
+                                feita</b>. Ele é <i>útil para rastrear responsabilidades e entender o histórico de
+                                alterações em um arquivo específico</i>, no entanto, o comando só consegue atuar sobre
+                            arquivos existentes e monitorados pelo git.
+                        </dd>
+                    </div>
+                </dl>
+
+                <figure>
+                    <figcaption>Exemplo:</figcaption>
+
+                    <img src="img/ex1_gblame.png" alt="Exemplo Git Blame" title="Exemplo Git Blame" width="840"
+                        height="73" loading="lazy">
+
+                    <img src="img/ex2_gblame.png" alt="Descrição das alterações feitas em cada commit no arquivo"
+                        title="Descrição das alterações feitas em cada commit no arquivo" width="842" height="73"
+                        loading="lazy">
+                </figure>
             </section>
         </article>
     </main>
