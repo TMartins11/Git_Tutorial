@@ -3,7 +3,7 @@
 <br>
 
 <ul>
-  <li><a href="https://tmartins11.github.io/Git_Tutorial/">Acesse o site </a></li>
+  <li><a href="https://tmartins11.github.io/Git_Tutorial/"><b>Site</b></a></li>
 </ul>
 
 <br>
